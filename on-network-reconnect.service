@@ -1,0 +1,10 @@
+[Unit]
+Description=Update the DNS to point to this machine
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/retrozelda/update_dns/on-network-reconnect.sh
+
+[Install]
+WantedBy=network-online.target

@@ -1,0 +1,18 @@
+Updates the various [sub].retrozelda.com domains to point to this machine when the network is reconnected.
+
+NOTE: Make sure to update users and folder paths in the files because i couldnt be bothered to make them more generic. 
+
+This uses the SiteWorx API.  The authenticated user exists inside of .key as a JSON container the "email" and "password"
+This .key file is required for the update_dns.py script to run properly.  Python 3 is required.
+
+on-network-reconnect.sh is what will run the python script as the current user.
+on-network-reconnect.service is the service that we need to install
+
+use ./install.sh as root to install the service
+use ./uninstall.sh as root to uninstall the service
+
+all logs will end up in ./logs
+and the last run will also be logged to ./latest.log
+
+a .ip_cache file will be created so we dont attempt any DNS edits if the IP hasnt changed.
+Delete this file to force update.
