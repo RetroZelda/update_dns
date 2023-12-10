@@ -7,6 +7,7 @@ This .key file is required for the update_dns.py script to run properly.  Python
 
 on-network-reconnect.sh is what will run the python script as the current user.
 on-network-reconnect.service is the service that we need to install
+on-network-reconnect.timer is the service's timer that will run the script periodically
 
 use ./install.sh as root to install the service
 use ./uninstall.sh as root to uninstall the service

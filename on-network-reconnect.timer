@@ -1,0 +1,11 @@
+[Unit]
+Description=Run on-network-reconnect every 12 hours
+
+[Timer]
+OnBootSec=1min
+OnCalendar=*-*-* */12:00:00
+Persistent=true
+Unit=on-network-reconnect.service
+
+[Install]
+WantedBy=timers.target
